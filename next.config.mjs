@@ -7,7 +7,8 @@ const nextConfig = {
     unoptimized: true,
   },
   output: 'export',
-  basePath: '/Batra_portfolio_beta',
+  basePath: process.env.NODE_ENV === 'production' ? '/Batra_site' : '',
+  trailingSlash: true,
 }
 
 export default nextConfig
